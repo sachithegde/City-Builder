@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Controller/time.gd" type="Script" id=1]
+
+[node name="Time" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Days" type="Timer" parent="."]
+
+[node name="DN_Cycle" type="Timer" parent="."]
+
+[connection signal="timeout" from="Days" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="DN_Cycle" to="." method="_on_DN_Cycle_timeout"]
